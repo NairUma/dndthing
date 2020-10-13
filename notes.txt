@@ -1,0 +1,3 @@
+options:
+- use formatting provided by c++
+- use outside packages (wrong word?) to interface(?) C++ w/ HTML/CSS
