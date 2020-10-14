@@ -1,0 +1,11 @@
+#CLASSES#
+1) Bard
+2) Barbarian
+3) Cleric
+4) Druid
+5) Paladin
+6) Ranger
+7) Rogue
+8) Warlock
+9) Artificer
+10) Wizard
