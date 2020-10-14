@@ -2,16 +2,68 @@
 #include <iostream>
 using namespace std;
 
+int rollD(int d, int t);
 
 dnd::dnd()
 {
+ int hp = 0;
+ string aSName[AS] = {"Strength", "Dexterity", "Intelligence", "Wisdom", "Constitution", "Charisma"};
+ string skName[SK] = {"Athletics (STR)" "Acrobatics (DEX)", "Sleight of Hand (DEX)", "Stealth (DEX)", "Arcana (INT)",
+ "History (INT)", "Investigation (INT)", "Nature (INT)", "Religion (INT)", "Animal Handling (WIS)", "Insight (WIS)",
+ "Medicine (WIS)", "Perception (WIS)", "Survival (WIS)", "Deception (CHA)", "Intimidation (CHA)", "Performance (CHA)",
+ "Persuasion (CHA)"};
+
+// Strength: Athletics
+// Dexterity: Acrobatics, Sleight of Hand, Stealth
+// Intelligence: Arcana, History, Investigation, Nature, Religion
+// Wisdom: Animal Handling, Insight, Medicine, Perception, Survival
+// Charisma: Deception, Intimidation, Performance, Persuasion
+
 
 }
+
 
 void dnd::getInfo()
 {
-    
+ cout << "- Get Information Section -" << endl;
+ char ans;
+
+
+ cout << "Name: ";
+ cin >> name;
+ //add random name generator??
+ cout << "Race: ";
+ cin >> race;
+//add racial info to use for stats and the like
+ cout << "Class: ";
+ cin >> charClass;
+
+ cout << "Would you like to insert HP or Auto-roll?" << endl;
+ cout << "Enter 'Y' for yes and 'N' for no: ";
+ //not added yet, need to pre-define the things for each class (probably just the basic ones)
+ cin >> ans;
+
+ cout << "Enter HP: ";
+ cin >> hp;
+
+ cout << "Enter Armor Class (AC): ";
+ cin >> ac;
+
+for(int i = 0; i < AS; i++)
+{
+ cout << "Enter your score for " << aSName[i] << ": ";
+ cin >> aSValue[i];
 }
+
+for(int i = 0; i < SK; i++)
+{
+ cout << "Enter your score for " << skName[i] << ": ";
+ cin >> skValue[i];
+}
+
+
+}
+
 void dnd::charSheet()
 {
 
@@ -33,7 +85,7 @@ void dnd::diceRoller()
     cin >> dt;
     }
     int res;
-    res = dRoll(dn, dt);
+    res = rollD(dn, dt);
 }
 void dnd::ACdefense()
 {
@@ -43,7 +95,7 @@ void dnd::ACdefense()
 
 
 
-int dRoll(int d, int t)
+int rollD(int d, int t)
 {
     int input;
     int total = 0;

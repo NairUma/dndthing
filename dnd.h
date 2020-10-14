@@ -13,13 +13,13 @@ class dnd
 {
     private:
         int ac; //armor class
-        std::string name; //name
+        string name; //name
         int hp; //hp
-        std::string race; //character race
-        std::string aSName[AS]; //ability score names
+        string race; //character race
+        string aSName[AS]; //ability score names
         int aSValue[AS]; //ability score VALUES from user
 
-        std::string skName[SK]; //skill names
+        string skName[SK]; //skill names
         int skValue[SK]; //skill values from user
 
         int level; //character's level
